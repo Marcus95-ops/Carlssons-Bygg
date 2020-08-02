@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900&display=swap');
+
+
+Framsidabod1 {
+    position: center absolute;
+}
+
+h1 {
+    --font-size: 80%;
+    --font-primary: 'Helvetica', sans-serif;
+    color: aquamarine;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: calc(var(--space) +4px );
+    margin: 25px -5px -40px -5px;
+}
+
+h2 {
+    --font-size: 80%;
+    --font-primary: 'Helvetica', sans-serif;
+    color: aquamarine;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: calc(var(--space) +4px );
+}
+
+p {
+
+	font-size:60%;
+	--font-primary: 'Helvetica', sans-serif;
+	font-display:auto;
+	text-emphasis-color:#891f1f;
+	text-align:center;
+	font-weight:400;
+
+}
+
+content blockquote {
+    right: 0px;
+    top: auto;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    z-index: -1; 
+    background-color: #FFAB91;
+    outline: none;
+    --font-primary: 'Helvetica', sans-serif;
+    color: black;
+}
+
+    blockquote h2 {
+        font-size: 20px;
+        display: block;
+        position: relative;
+        
+    }
+
+     blockquote p1 {
+        font-size: 12px;
+        position: relative;
+        outline: none;
+    }
+
+text {
+    font-size: 30px;
+    --font-primary: 'Helvetica', sans-serif;
+    font-display: auto;
+    text-emphasis-color: turquoise;
+    text-align: right;
+    font-weight: 600;
+    display: block;
+    position: relative;
+    top: 600px;
+}
+
+input.body-text {
+    color: black;
+    position: center;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .15);
+    background-color: white;
+}
+
+Tak {
+    text-align: center;
+    position: absolute;
+    display: block;
+    width: inherit;
+    border: inherit;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 12px;
+    font-size: inherit;
+    font-style: inherit;
+}
+
+:root {
+  --color-primary: #002626;
+  --color-secondary: #F0F7EE;
+  --duration: 1s;
+  --nav-duration: calc(var(--duration) / 4);
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --space: 1rem;
+  --font-primary: 'Helvetica', sans-serif;
+  --font-heading: 'Merriweather', serif;
+  --font-size: 1.125rem;
+  --line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+h2 {
+  margin-bottom: calc(var(--space) +4px );
+  font-family: var(--font-heading);
+  font-size: calc(var(--font-size) + 6vmin);
+  line-height: calc(var(--line-height) / 2);
+}
+
+.main-navigation-toggle {
+  position: fixed;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  }
+  
+  .main-navigation-toggle-lable {
+    position: fixed;
+    top: calc(var(--space) * 1.5);
+    right: calc(var(--space) * 2);
+    cursor: pointer;
+    z-index: 50;
+  }
+
+body {
+    font-family: Libre Caslon Text;
+    background-color: #FFAB91;
+}
+
+.body-text {
+    padding-top: 20vh;
+    text-align: center;
+    position: relative;
+}
+
+.hamburger-icon {
+    position: absolute;
+    z-index: 1;
+    top: 5vh;
+    left: 5vw;
+    padding-bottom: 2vh;
+}
+
+    .hamburger-icon span {
+        height: 5px;
+        width: 40px;
+        background-color: black;
+        display: block;
+        margin: 5px 0px 5px 0px;
+        transition: 0.7s ease-in-out;
+        transform: none;
+    }
+
+#openmenu:checked ~ .menu-pane {
+    left: -5vw;
+    transform: translateX(-5vw);
+}
+
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(2) {
+    transform: translate(0%, 175%) rotate(-45deg);
+    background-color: white;
+}
+
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(3) {
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(1) {
+    opacity: 0;
+}
+
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(4) {
+    opacity: 0;
+}
+
+div.menu-pane {
+    background-color: #000;
+    position: absolute;
+    top: 0px;
+    transform: translateX(-115vw);
+    transform-origin: 0, 0;
+    width: 100vw;
+    height: 100%;
+    transition: 0.6s ease-in-out;
+}
+
+.menu-pane p {
+    color: black;
+    font-size: 0.6em;
+}
+
+.menu-pane nav {
+    padding: 10%;
+}
+
+.menu-links li, a, span, Sökning {
+    transition: 0.5s ease-in-out;
+}
+
+.menu-pane ul {
+    padding: 10%;
+    display: inline-block;
+    font-size: 1.4em;
+}
+
+.menu-pane li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+    .menu-pane li:first-child {
+        font-size: 1.3em;
+        margin-left: -10px;
+    }
+
+.menu-pane ul li:last-child {
+    float: right;
+    width: 20%;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.menu-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-links li:hover a {
+    color: #FFAB91;
+}
+
+a:any-link {
+    color: #8fa133;
+    text-decoration:none;
+}
+
+input.hamburger-checkbox {
+    position: absolute;
+    z-index: 3;
+    top: 5vh;
+    left: 5vw;
+    width: 10vw;
+    opacity: 0;
+    height: 6vh;
+}
+
+button{
+
+       color:black;
+       padding:12px;
+       position: page center;
+
+  }
